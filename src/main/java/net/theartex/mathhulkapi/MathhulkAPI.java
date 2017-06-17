@@ -1,16 +1,9 @@
-package com.al1l.mathhulkapi;
+package net.theartex.mathhulkapi;
 
-import com.al1l.mathhulkapi.skript.Addon;
-import com.al1l.mathhulkapi.skript.Documentation;
+import net.theartex.mathhulkapi.skript.Addon;
+import net.theartex.mathhulkapi.skript.Documentation;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
 
 import java.io.*;

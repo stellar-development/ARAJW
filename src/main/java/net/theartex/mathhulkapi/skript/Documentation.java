@@ -1,6 +1,6 @@
-package com.al1l.mathhulkapi.skript;
+package net.theartex.mathhulkapi.skript;
 
-import com.al1l.mathhulkapi.MathhulkAPI;
+import net.theartex.mathhulkapi.MathhulkAPI;
 import lombok.Getter;
 
 import java.io.IOException;

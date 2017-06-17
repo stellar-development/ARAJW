@@ -1,4 +1,4 @@
-package com.al1l.mathhulkapi;
+package net.theartex.mathhulkapi;
 
 import lombok.Getter;
 import org.json.JSONObject;
