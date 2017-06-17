@@ -1,4 +1,4 @@
 target/
 .idea/
 *.iml
-src/main/java/com/al1l/mathhulkapi/TestMain.java
+src/main/java/net/theartex/mathhulkapi/TestMain.java
