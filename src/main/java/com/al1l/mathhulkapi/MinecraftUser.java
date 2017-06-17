@@ -3,6 +3,7 @@ package com.al1l.mathhulkapi;
 import lombok.Getter;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +18,7 @@ public class MinecraftUser {
     @Getter
     private final MathhulkAPI api;
 
-    public MinecraftUser(MathhulkAPI api, UUID uuid) {
+    public MinecraftUser(MathhulkAPI api, UUID uuid) throws IOException {
         Map<String, String> args = new HashMap<>();
         args.put("uuid", uuid.toString().replaceAll("-", ""));
         JSONObject jsonObject = new JSONObject(api.post("username", args));
@@ -27,7 +28,7 @@ public class MinecraftUser {
         this.api = api;
     }
 
-    public MinecraftUser(MathhulkAPI api, String username) {
+    public MinecraftUser(MathhulkAPI api, String username) throws IOException {
         Map<String, String> args = new HashMap<>();
         args.put("username", username);
         JSONObject jsonObject = new JSONObject(api.post("username", args));
@@ -37,7 +38,7 @@ public class MinecraftUser {
         this.api = api;
     }
 
-    public Map<String, Date> getNameHistory() {
+    public Map<String, Date> getNameHistory() throws IOException {
         Map<String, Date> nameHistory = new HashMap<>();
         Map<String, String> args = new HashMap<>();
         args.put("uuid", uuid.toString().replaceAll("-", ""));

@@ -36,7 +36,7 @@ public class Alert {
         this.user = user;
     }
 
-    public void markAsRead() {
+    public void markAsRead() throws IOException {
         if (!isNew)
             return;
         Map<String, String> args = new HashMap<>();

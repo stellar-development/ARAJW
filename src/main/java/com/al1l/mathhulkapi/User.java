@@ -59,7 +59,7 @@ public class User {
         this.active = data.getString("active").equalsIgnoreCase("yes");
     }
 
-    public Alert sendAlert(String title, String message) {
+    public Alert sendAlert(String title, String message) throws IOException {
         Map<String, String> args = new HashMap<>();
         args.put("key", key);
         args.put("title", title);
@@ -68,14 +68,14 @@ public class User {
         return getAlert(Integer.parseInt(json.getJSONObject("data").getString("id")));
     }
 
-    public Alert getAlert(int id) {
-        for (Alert a : getAllAlerts())
+    public Alert getAlert(int id) throws IOException {
+        for (Alert a : getAlerts())
             if (a.getId() == id)
                 return a;
         return null;
     }
 
-    public List<Alert> getAllAlerts() {
+    public List<Alert> getAlerts() throws IOException {
         Map<String, String> args = new HashMap<>();
         args.put("key", key);
         JSONObject jsonObject = new JSONObject(api.post("alerts", args));
@@ -96,5 +96,13 @@ public class User {
             }
         }
         return alerts;
+    }
+
+    public List<Paste> getPastes() throws IOException {
+        return api.getUserPastes(username);
+    }
+
+    public List<DNSRecord> getDNSRecords() throws IOException {
+        return api.getUserDNSRecods(username);
     }
 }
