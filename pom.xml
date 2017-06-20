@@ -8,12 +8,42 @@
     <artifactId>mathhulkapi</artifactId>
     <version>2.1</version>
 
+    <name>Artex Java API</name>
+    <description>A Java hook for the Artex web developer API.</description>
+    <url>https://theartex.net/documentation</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>AL_1</name>
+            <email>allen.m.lantz@gmail.com</email>
+            <organization>Artex Development</organization>
+            <organizationUrl>https://theartex.net/</organizationUrl>
+        </developer>
+        <developer>
+            <name>mathhulk</name>
+            <organization>Artex Development</organization>
+            <organizationUrl>https://theartex.net/</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/artexdevelopment/MathhulkJavaAPI.git</connection>
+        <developerConnection>scm:git:ssh://github.com:artexdevelopment/MathhulkJavaAPI.git</developerConnection>
+        <url>http://github.com/artexdevelopment/MathhulkJavaAPI/tree/master</url>
+    </scm>
+
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <versionMavenClean>3.0.0</versionMavenClean>
         <versionMavenShade>3.0.0</versionMavenShade>
         <versionMavenSources>3.0.1</versionMavenSources>
         <versionMavenJavaDoc>2.10.4</versionMavenJavaDoc>
